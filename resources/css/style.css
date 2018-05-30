@@ -1,0 +1,160 @@
+/* Universal Styles */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 2rem inherit;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+  padding: 2rem 0 1.5rem 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+
+}
+
+.main-content {
+  position: relative;
+  top: 4rem; /* To offset for fixed header. */
+}
+
+.button {
+  background-color: skyblue;
+  color: white;
+  padding: 0.75rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  padding: 2rem 0 2rem 1.5rem;
+}
+
+.left-column {
+  width: 60%;
+  padding-right: 1.5rem;
+}
+
+.left-column img,
+.left-column video {
+  max-width: 100%;
+  height: auto;
+}
+
+.right-column {
+  width: 40%;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+}
+
+.info-box-image {
+  overflow: hidden;
+  height: auto;
+  width: 35%;
+  padding: 1rem;
+}
+
+.info-box-image img {
+  max-width: 100%;
+}
+
+.info-box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: whitesmoke;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+header .logo a {
+  display: flex;
+  align-items: center;
+}
+
+header .logo p {
+  font-weight: bold;
+}
+
+header .logo span {
+  font-weight: lighter;
+  color: darkgrey;
+}
+
+header nav.desktop li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+header nav.mobile {
+  display: none;
+}
+
+/* CTA Banner Section Styles */
+#cta {
+  background-color: CornflowerBlue;
+}
+
+#cta .right-column {
+    display: flex;
+    align-items: center;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 20rem;
+  min-height: 15rem;
+  padding: 1rem;
+}
+
+/* On Campus Section Styles */
+.author {
+  line-height: 5;
+}
+
+/* Online Section Styles */
+#online {
+  display: none;
+}
+
+/* For Companies Section Styles */
+#companies {
+
+}
+
+/* Footer Styles */
+footer {
+  display: none;
+}
