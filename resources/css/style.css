@@ -40,6 +40,13 @@ nav li {
   top: 4rem; /* To offset for fixed header. */
 }
 
+:target:before {
+  content: "";
+  display: block;
+  height: 4rem; /* To offset targets for fixed header */
+  margin: -4rem 0 0; /* note: this solution did not work for link to #cta */
+}
+
 .button {
   background-color: skyblue;
   color: white;
@@ -66,7 +73,6 @@ nav li {
 
 .right-column {
   width: 40%;
-  margin-top: -1rem;
 }
 
 .info-box {
@@ -156,6 +162,10 @@ header nav.mobile {
 /* On Campus Section Styles */
 .author {
   line-height: 5;
+}
+
+#on-campus .right-column {
+  margin-top: -1rem; /* keeps first item flush with left column */
 }
 
 /* Online Section Styles */
