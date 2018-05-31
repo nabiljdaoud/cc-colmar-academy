@@ -17,7 +17,7 @@
             <p>COLMAR<span>ACADEMY</span></p>
           </a>
         </div>
-        <nav class="desktop">
+        <nav role="navigation" class="desktop">
           <ul>
             <li><a href="#on-campus">On campus</a></li>
             <li><a href="#online">Online</a></li>
@@ -25,7 +25,7 @@
             <li><a href="#">Sign in</a></li>
           </ul>
         </nav>
-        <nav class="mobile">
+        <nav role="navigation" class="mobile">
           <ul>
             <li><a href="#"><img src="./resources/media/images/ic-logo.svg"></a></li>
             <li><a href="#on-campus"><img src="./resources/media/images/ic-on-campus.svg"></a></li>
@@ -108,44 +108,50 @@
       <!-- Online Info -->
       <div id="online">
         <h2>Start learning</h2>
-        <div class="gallery">
-          <!-- First Row -->
-          <div class="gallery-row">
-            <div class="gallery-item">
-              <img src="./resources/media/images/course-software.jpg" alt="Apple computers on a desk lit by a small lamp."/>
+        <div class="gallery grid">
+          <div class="gallery-item">
+            <img src="./resources/media/images/course-software.jpg" alt="Apple computers on a desk lit by a small lamp."/>
+            <div class="gallery-item-text">
               <h4>Software engineering</h4>
               <span>COURSES</span>
               <p>Web Development, Moile Development, iOT, APIs</p>
             </div>
-            <div class="gallery-item">
-              <img src="./resources/media/images/course-computer-art.jpg" alt="Hand holding a mobile phone over a wooden table"/>
+          </div>
+          <div class="gallery-item">
+            <img src="./resources/media/images/course-computer-art.jpg" alt="Hand holding a mobile phone over a wooden table"/>
+            <div class="gallery-item-text">
               <h4>Computer art</h4>
               <span>COURSES</span>
               <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
             </div>
-            <div class="gallery-item">
-              <img src="./resources/media/images/course-design.jpg" alt="Hands holding a camera"/>
+          </div>
+          <div class="gallery-item">
+            <img src="./resources/media/images/course-design.jpg" alt="Hands holding a camera"/>
+            <div class="gallery-item-text">
               <h4>Design</h4>
               <span>COURSES</span>
               <p>User Experience Design, User Research, Visual Design</p>
             </div>
           </div>
-          <!-- Second Row -->
-          <div class="gallery-row">
-            <div class="gallery-item">
-              <img src="./resources/media/images/course-data.jpg" alt="Open laptop computer displaying graphs on a glass desk"/>
+          <div class="gallery-item">
+            <img src="./resources/media/images/course-data.jpg" alt="Open laptop computer displaying graphs on a glass desk"/>
+            <div class="gallery-item-text">
               <h4>Data</h4>
               <span>COURSES</span>
               <p>Data Science, Big Data, SQL, Data Visualization</p>
             </div>
-            <div class="gallery-item">
-              <img src="./resources/media/images/course-business.jpg" alt="Chess board with sofa in soft focus behind it"/>
+          </div>
+          <div class="gallery-item">
+            <img src="./resources/media/images/course-business.jpg" alt="Chess board with sofa in soft focus behind it"/>
+            <div class="gallery-item-text">
               <h4>Business</h4>
               <span>COURSES</span>
               <p>Product Development, Business Development, Startup</p>
             </div>
-            <div class="gallery-item">
-              <img src="./resources/media/images/course-marketing.jpg" alt="Hand touching a smart watch"/>
+          </div>
+          <div class="gallery-item">
+            <img src="./resources/media/images/course-marketing.jpg" alt="Hand touching a smart watch"/>
+            <div class="gallery-item-text">
               <h4>Marketing</h4>
               <span>COURSES</span>
               <p>Analytics, Content Marketing, Mobile Marketing</p>
@@ -160,7 +166,7 @@
         <div class="container">
           <div class="left-column">
             <video src="./resources/media/videos/thesis.mp4" autoplay loop>Video not supported</video>
-            <h4>Reimagine urban</h4>
+            <h4 class="main-thesis">Reimagine urban</h4>
             <p>"Curabitur vitae libero in ipsum porttitor consequant. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget mana laoreet, efficitur dolor consequat, trisque ligula."</p>
           </div>
 
@@ -191,7 +197,7 @@
 
       <footer>
         <span>&copy; 2016 Colmar Academy. All rights reserved</span>
-        <nav>
+        <nav role="navigation">
           <ul>
             <li><a href="#">Terms</a></li>
             <li><a href="#">Privacy</a></li>
