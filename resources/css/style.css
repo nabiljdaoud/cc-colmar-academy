@@ -1,7 +1,25 @@
+/* Fonts linked two ways here and once in index.html for demonstration
+ * of ability to link fonts not best practice. */
+/* Google Font Link */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_ZpC3gnD_vx3rCs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Downloaded Font */
+@font-face {
+  font-family: "Linux Libertine";
+  src: url(../fonts/LinLibertine_RB.ttf) format('truetype');
+  src: url(../fonts/LinLibertine_RI.ttf) format('truetype');
+}
+
 /* Universal Styles */
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -10,14 +28,24 @@ body {
   line-height: 1.4;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: bold;
+}
+
+
 h1 {
   font-size: 2.5rem;
+  line-height: 1;
 }
 
 h2 {
   font-size: 2rem;
-  padding-top: 2rem;
   text-align: center;
+  background-color: #F4F0CB;
+  box-shadow: 0 0 5px 5px #F4F0CB;
+  position: relative;
+  top: 2rem;
 }
 
 h3 {
@@ -31,28 +59,37 @@ h4 {
 
 nav li {
   display: inline-block;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
+  font-family: "Roboto Slab", sans-serif;
 }
 
 .main-content {
-  /* margin-top: 4rem; */
   position: relative;
   top: 4rem; /* To offset for fixed header. */
 }
 
-:target:before {
+/* This hack has some odd behaviors */
+:target:not(#companies):before {
   content: "";
   display: block;
   height: 4rem; /* To offset targets for fixed header */
   margin: -4rem 0 0; /* note: this solution did not work for link to #cta */
+  /* background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0); */
 }
 
 .button {
-  background-color: skyblue;
-  color: white;
+  background-color: #B7C68B;
+  /* color: white; */
   padding: 0.75rem;
-  max-width: 100%;
+  /* width: 10rem; */
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 2rem;
   text-align: center;
+  font-family: "Roboto Slab", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .container {
@@ -69,6 +106,24 @@ nav li {
 .left-column video {
   max-width: 100%;
   height: auto;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 975px) {
+  .container {
+    display: block;
+    padding: 0;
+  }
+  .left-column img,
+  .left-column video {
+    border-radius: 0;
+  }
+  .left-column-text {
+    padding: 0 2rem;
+  }
+  .info-box {
+    background-color: #F4F0CB;
+  }
 }
 
 .right-column {
@@ -103,7 +158,7 @@ nav li {
 }
 
 .info-box-text a {
-  color: royalblue;
+  color: lightslategrey;
 }
 
 /* Header Styles */
@@ -111,8 +166,8 @@ header {
   position: fixed;
   z-index: 100;
   width: 100%;
-  border-bottom: solid 1px #c6c1c1;
-  background-color: whitesmoke;
+  border-bottom: solid 1px #33241f;
+  background-color: #B3A580;
 }
 
 header .content {
@@ -125,24 +180,34 @@ header .content {
 header .logo a {
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Linux Libertine', serif;
+  line-height: 1;
 }
 
-header .logo p {
+header .logo strong {
   font-weight: bold;
 }
 
-header .logo span {
-  font-weight: lighter;
-  color: darkgrey;
+header .logo em {
+  font-style: italic;
+  color: #33241f;
 }
 
 header nav.mobile {
   display: none;
 }
 
+/* Tablet View */
+/@media only screen and (max-width: 688px) {
+  .logo strong, .logo em {
+    display: none;
+  }
+}
+
 /* CTA Banner Section Styles */
 #cta {
-  background-color: CornflowerBlue;
+  background-color: #685642;
 }
 
 #cta .right-column {
@@ -154,12 +219,37 @@ header nav.mobile {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 20rem;
+  width: 22rem;
   min-height: 15rem;
   padding: 1rem;
 }
 
+/* Tablet View */
+@media only screen and (max-width: 975px) {
+  #cta .right-column, .left-column {
+    width: 100%;
+    padding: 0;
+  }
+  .text-content {
+    width: 100%;
+    padding: 2rem 1rem;
+    min-height: 0;
+  }
+  .text-content h1,
+  .text-content h4 {
+    padding: 0 1rem 1.5rem 1rem;
+  }
+  .button {
+    width: 20rem;
+    margin: auto;
+  }
+}
+
 /* On Campus Section Styles */
+#on-campus {
+  background-color: #DED29E;
+}
+
 .author {
   line-height: 5;
 }
@@ -168,22 +258,34 @@ header nav.mobile {
   margin-top: -1rem; /* keeps first item flush with left column */
 }
 
+/* Tablet View */
+@media only screen and (max-width: 975px) {
+  #on-campus .right-column {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    width: auto;
+  }
+}
+
 /* Online Section Styles */
 #online {
-  background-color: CornflowerBlue;
+  background-color: #685642;
 }
 
 .gallery {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   grid-gap: 2rem;
-  padding: 2rem 4.5rem;
+  padding: 4rem 4.5rem;
 }
 
 .gallery-item {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #F4F0CB;
+  border-radius: 3px;
 }
 
 .gallery-item img {
@@ -199,15 +301,45 @@ header nav.mobile {
   padding: 0.25rem 0;
 }
 
+/* Tablet View */
+@media only screen and (max-width: 1046px) {
+  .gallery {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    padding: 4rem 3rem;
+  }
+}
+
 /* For Companies Section Styles */
+#companies {
+  background-color: #DED29E;
+}
+
 .main-thesis {
   padding: 1.5rem 0 0.5rem 0;
 }
 
+#companies .container {
+  padding-top: 4rem;
+}
+
+/* Tablet View */
+@media only screen and (max-width: 975px) {
+  /* #companies .left-column {
+    padding-top: 4rem;
+  } */
+  #companies .right-column {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    width: auto;
+  }
+}
+
 /* Footer Styles */
 footer {
-  border-top: 1px solid black;
-  margin: 0 0.125rem;
+  background-color: #B3A580;
+  border-top: 1px solid #33241f;
   padding: 1rem 1.375rem 2rem 1.375rem;
   display: flex;
   justify-content: space-between;
