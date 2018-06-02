@@ -199,11 +199,35 @@ header nav.mobile {
 }
 
 /* Tablet View */
-/@media only screen and (max-width: 688px) {
+@media only screen and (max-width: 680px) {
   .logo strong, .logo em {
     display: none;
   }
 }
+
+/* Mobile View */
+@media only screen and (max-width: 460px) {
+  header .desktop {
+    display: none;
+  }
+  header nav.mobile {
+    display: block;
+    width: 100%;
+  }
+  header ul {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* larger target for mobile */
+  header a {
+    padding: 1rem;
+  }
+  header .content {
+    padding: 1rem 0.5rem;
+  }
+}
+
 
 /* CTA Banner Section Styles */
 #cta {
@@ -245,6 +269,24 @@ header nav.mobile {
   }
 }
 
+/* Mobile View */
+@media only screen and (max-width: 390px) {
+  .text-content {
+    width: 100%;
+    padding: 2rem 1rem;
+    min-height: 0;
+  }
+  .text-content h1 {
+    padding: 0 0 2rem 0;
+  }
+  .text-content h4 {
+    padding: 0 0 1.5rem 0;
+  }
+  .button {
+    width: 90%;
+  }
+}
+
 /* On Campus Section Styles */
 #on-campus {
   background-color: #DED29E;
@@ -258,7 +300,11 @@ header nav.mobile {
   margin-top: -1rem; /* keeps first item flush with left column */
 }
 
-/* Tablet View */
+img.mobile {
+  display: none;
+}
+
+/* Tablet Landscape View */
 @media only screen and (max-width: 975px) {
   #on-campus .right-column {
     display: grid;
@@ -266,6 +312,38 @@ header nav.mobile {
     grid-gap: 1rem;
     padding: 1rem;
     width: auto;
+  }
+}
+
+/* Tablet Portrait View */
+@media only screen and (max-width: 790px) {
+  #on-campus .right-column {
+    grid-template: repeat(3, auto) / minmax(255px, 450px);
+  }
+}
+
+/* Mobile View */
+@media only screen and (max-width: 460px) {
+  #on-campus .left-column {
+    display: none;
+  }
+  .info-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info-box-image {
+    width: auto;
+    padding: 0;
+  }
+  img.desktop {
+    display: none;
+  }
+  img.mobile {
+    display: block;
+  }
+  .info-box-text {
+    width: auto;
+    padding: 1rem;
   }
 }
 
@@ -286,6 +364,7 @@ header nav.mobile {
   flex-direction: column;
   background-color: #F4F0CB;
   border-radius: 3px;
+  /* max-width: 360px; */
 }
 
 .gallery-item img {
@@ -301,11 +380,54 @@ header nav.mobile {
   padding: 0.25rem 0;
 }
 
-/* Tablet View */
+/* Tablet Landscape View */
 @media only screen and (max-width: 1046px) {
   .gallery {
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     padding: 4rem 3rem;
+  }
+}
+
+/* Tablet Portrait View */
+@media only screen and (max-width: 714px) {
+  .gallery {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    padding: 3rem 1rem 2rem 1rem;
+    grid-gap: 0.5rem;
+  }
+}
+
+/* Phablet View */
+@media only screen and (max-width: 714px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-item {
+    max-width: 360px;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Mobile View */
+@media only screen and (max-width: 460px) {
+  .gallery-item img,
+  .gallery-item span,
+  .gallery-item p {
+    display: none;
+  }
+  .gallery {
+    align-items: stretch;
+  }
+  .gallery-item {
+    max-width: 100%;
+  }
+  .gallery-item-text {
+    padding: 1rem; /* 1rem 1.5rem 1rem; */
+  }
+  .gallery-item-text h4 {
+    padding: 0;
   }
 }
 
@@ -322,17 +444,30 @@ header nav.mobile {
   padding-top: 4rem;
 }
 
-/* Tablet View */
+/* Tablet Landscape View */
 @media only screen and (max-width: 975px) {
-  /* #companies .left-column {
-    padding-top: 4rem;
-  } */
   #companies .right-column {
     display: grid;
     grid-template: auto / repeat(2, 1fr);
     grid-gap: 1rem;
     padding: 1rem;
     width: auto;
+  }
+}
+/* Tablet Portrait View */
+@media only screen and (max-width: 790px) {
+  #companies .right-column {
+    grid-template: repeat(2, auto) / minmax(255px, 450px);
+  }
+}
+/* Mobile View */
+@media only screen and (max-width: 460px) {
+  #companies .right-column,
+  #companies .left-column-text {
+    display: none;
+  }
+  video {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -343,4 +478,11 @@ footer {
   padding: 1rem 1.375rem 2rem 1.375rem;
   display: flex;
   justify-content: space-between;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 560px) {
+  footer nav {
+    display: none;
+  }
 }
