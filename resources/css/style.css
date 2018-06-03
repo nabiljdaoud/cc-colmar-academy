@@ -63,6 +63,12 @@ nav li {
   font-family: "Roboto Slab", sans-serif;
 }
 
+/* nav li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  border-radius: 10px;
+} */
+
 .main-content {
   position: relative;
   top: 4rem; /* To offset for fixed header. */
@@ -90,7 +96,13 @@ nav li {
   font-family: "Roboto Slab", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+  text-shadow: none;
+  transition: background-color 1s linear 100ms;
 }
+
+/* .button:hover {
+  background-color: lightgreen;
+} */
 
 .container {
   display: flex;
@@ -246,6 +258,8 @@ header nav.mobile {
   width: 22rem;
   min-height: 15rem;
   padding: 1rem;
+  color: #B7C68B;
+  text-shadow: 1px 1px black;
 }
 
 /* Tablet View */
