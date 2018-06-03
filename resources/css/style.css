@@ -61,13 +61,19 @@ nav li {
   display: inline-block;
   padding: 0 0.5rem;
   font-family: "Roboto Slab", sans-serif;
+  transition: all 0.5s;
 }
 
-/* nav li:hover {
+nav li:hover {
   background-color: rgba(255, 255, 255, 0.5);
-  text-decoration: underline;
   border-radius: 10px;
-} */
+}
+
+nav li a:hover,
+.logo:hover {
+  color: navy; /* this does not affect the logo */
+  text-decoration: underline;
+}
 
 .main-content {
   position: relative;
@@ -100,9 +106,9 @@ nav li {
   transition: background-color 1s linear 100ms;
 }
 
-/* .button:hover {
+.button:hover {
   background-color: lightgreen;
-} */
+}
 
 .container {
   display: flex;
@@ -171,6 +177,12 @@ nav li {
 
 .info-box-text a {
   color: lightslategrey;
+  transition: color 1s;
+}
+
+.info-box-text a:hover {
+  text-decoration: underline;
+  color: blue;
 }
 
 /* Header Styles */
@@ -379,6 +391,11 @@ img.mobile {
   background-color: #F4F0CB;
   border-radius: 3px;
   /* max-width: 360px; */
+  transition: background-color 1s;
+}
+
+.gallery-item:hover {
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .gallery-item img {
@@ -456,6 +473,12 @@ img.mobile {
 
 #companies .container {
   padding-top: 4rem;
+}
+
+#companies .info-box:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+  transition: background-color 1s;
 }
 
 /* Tablet Landscape View */
